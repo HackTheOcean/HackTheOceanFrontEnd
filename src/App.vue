@@ -1,23 +1,15 @@
 <template>
-<div>
-  <menu/>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  
-  
-</div>
+  <EndangeredAnimals/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-import Menu from './components/navbar.vue'
+import EndangeredAnimals from './components/EndangeredAnimals.vue'
 
 
 export default {
   name: 'App',
   components: {
-    Menu,
-    HelloWorld
+    EndangeredAnimals,
   }
 }
 </script>
