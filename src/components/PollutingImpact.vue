@@ -8,29 +8,11 @@
 
             <div class="offset-lg-1 offset-md-0 col-xl-5 col-lg-4 filter-negative-effect justify-content-center align-self-center">
                 <p class="fw-normal">Selecciona el efecto negativo y conoce su impacto</p>
-                <div class="container-input-radio-for-negative-effect">
+                <div class="container-input-radio-for-negative-effect" v-for="(pollutingImpact, index) in pollutingImpacts" :key="index">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="negative-effect" id="Enredos"  v-model="NegativeEffectPollutingImpact" value="Enredos" checked @change="onChange($event)">
-                        <label class="form-check-label" for="Enredos">
-                            Enredos
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="negative-effect" id="Ingesta" v-model="NegativeEffectPollutingImpact" value="Ingesta" @change="onChange($event)">
-                        <label class="form-check-label" for="Ingesta">
-                            Ingesta
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="negative-effect" id="Asfixia" v-model="NegativeEffectPollutingImpact" value="Asfixia" @change="onChange($event)">
-                        <label class="form-check-label" for="Asfixia">
-                            Asfixia
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="negative-effect" id="chemicalContamination" v-model="NegativeEffectPollutingImpact" value="Contaminación química" @change="onChange($event)">
-                        <label class="form-check-label" for="chemicalContamination">
-                            Contaminación química
+                        <input class="form-check-input" type="radio" name="negative-effect" :id="'polluting-impact-'+index"  v-model="NegativeEffectPollutingImpact" :value="pollutingImpact.nombreImpacto" @change="onChange($event)">
+                        <label class="form-check-label" :for="'polluting-impact-'+index">
+                            {{ pollutingImpact.nombreImpacto }}
                         </label>
                     </div>
                 </div>      
@@ -51,14 +33,26 @@ export default {
     name: 'PollutingImpact',
     data() {
         return{
-            NegativeEffectPollutingImpact: 'Enredos'
-        }               // initialize the_answer to be your checked option
+            NegativeEffectPollutingImpact: 'Enredos',
+            pollutingImpacts: [],
+        }
     },
     methods:{
+        getAllPollutingImpacts(){
+            PollutingImpactService.getAll()
+            .then(response => {
+                this.pollutingImpacts = response.data;
+                this.NegativeEffectPollutingImpact =  this.pollutingImpacts[0].nombreImpacto;
+            })
+            .catch(e => {
+            console.log(e);
+            });
+        },
         getPollutingImpact(id) {
             PollutingImpactService.get(id)
             .then(response => {
                 const polluting_impact_description = response.data.detalleImpacto;
+                this.NegativeEffectPollutingImpact = response.data.nombreImpacto;
                 document.getElementById('text-polluting-impact').textContent = polluting_impact_description;
             })
             .catch(e => {
@@ -89,6 +83,9 @@ export default {
                 document.getElementById('text-polluting-impact').textContent = 'Selecciona el efecto negativo y conoce su impacto';
             }
         }
+    },
+    mounted() {
+        this.getAllPollutingImpacts();
     }
 }
 </script>
