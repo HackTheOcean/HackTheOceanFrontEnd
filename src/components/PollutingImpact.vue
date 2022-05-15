@@ -45,6 +45,8 @@
 </template>
 
 <script>
+    import PollutingImpactService from "../services/PollutingImpactService";
+
 export default {
     name: 'PollutingImpact',
     data() {
@@ -53,27 +55,38 @@ export default {
         }               // initialize the_answer to be your checked option
     },
     methods:{
+        getPollutingImpact(id) {
+            PollutingImpactService.get(id)
+            .then(response => {
+                const polluting_impact_description = response.data.detalleImpacto;
+                document.getElementById('text-polluting-impact').textContent = polluting_impact_description;
+            })
+            .catch(e => {
+            console.log(e);
+            });
+        },
         onChange(event) {
-            var data = event.target.value;
+            let data = event.target.value;
+            
             if(data == 'Enredos'){
-                document.getElementById('image-polluting-impact').src = require('@/assets/img/polluting-impact/turtle-polluting-impact.png')
-                document.getElementById('text-polluting-impact').textContent = 'Artículos como sogas, redes, trampas y líneas de monofilamento de equipos de pesca abandonados, perdidos o descartados enmarañan a los animales marinos, causándoles heridas, asfixia, restricciones de movilidad y la muerte.'
+                this.getPollutingImpact(1);
+                document.getElementById('image-polluting-impact').src = require('@/assets/img/polluting-impact/turtle-polluting-impact.png');
             }
             else if(data == 'Ingesta'){
-                document.getElementById('image-polluting-impact').src = require('@/assets/img/polluting-impact/seagull-polluting-impact.png')
-                document.getElementById('text-polluting-impact').textContent = 'Los animales marinos de todo tipo ingieren plástico, desde los superpredadores hasta el plancton en la base de la cadena alimenticia. Esto puede ocasionarles lesiones graves, afectando la ingesta de alimentos al generar un falso sentido de saciedad, bloqueando su sistema digestivo o causando heridas internas'
+                this.getPollutingImpact(2);
+                document.getElementById('image-polluting-impact').src = require('@/assets/img/polluting-impact/seagull-polluting-impact.png');
             }
             else if(data == 'Asfixia'){
-                document.getElementById('image-polluting-impact').src = require('@/assets/img/polluting-impact/seal-polluting-impact.png')
-                document.getElementById('text-polluting-impact').textContent = 'La contaminación por plásticos priva de luz, alimentos y oxígeno a los corales, esponjas y animales que viven en el lecho marino y reduce la cantidad de oxígeno y comida disponible en los sedimentos. Esto puede impactar negativamente a los ecosistemas y darle cabida a los patógenos en deteriorode la vida marina'
+                this.getPollutingImpact(3);
+                document.getElementById('image-polluting-impact').src = require('@/assets/img/polluting-impact/seal-polluting-impact.png');
             }
             else if(data == 'Contaminación química'){
-                document.getElementById('image-polluting-impact').src = require('@/assets/img/polluting-impact/chemical-polluting-impact.png')
-                document.getElementById('text-polluting-impact').textContent = 'Aunque no todos los ingredientes en el plástico son dañinos, algunos sí lo son y pueden filtrarse en el ambiente marino. Las partículas de plástico más pequeñas pueden atravesar las células de los animales marinos y algunas pueden llegar hasta el cerebro.'
+                this.getPollutingImpact(4);
+                document.getElementById('image-polluting-impact').src = require('@/assets/img/polluting-impact/chemical-polluting-impact.png');
             }
             else{
-                document.getElementById('image-polluting-impact').src = require('@/assets/img/polluting-impact/turtle-polluting-impact.png')
-                document.getElementById('text-polluting-impact').textContent = 'Selecciona el efecto negativo y conoce su impacto'
+                document.getElementById('image-polluting-impact').src = require('@/assets/img/polluting-impact/turtle-polluting-impact.png');
+                document.getElementById('text-polluting-impact').textContent = 'Selecciona el efecto negativo y conoce su impacto';
             }
         }
     }
