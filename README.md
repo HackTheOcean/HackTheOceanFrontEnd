@@ -1,5 +1,6 @@
 # HackTheOceanFrontEnd
-Seccion frontend del proyecto desarrollado para hackaton en LaunchX
+Seccion frontend del proyecto desarrollado para hackaton en LaunchX, aqui explicaremos que hicimos con un mapa mental en cual se puede lo hicimos como se hizo la investigacion.
+![map_acuatico](https://user-images.githubusercontent.com/33709574/168497018-d66c8976-fdc0-4a8b-86b3-b43f71cbf0a4.png)
 
 ## Front Project setup
 ```
