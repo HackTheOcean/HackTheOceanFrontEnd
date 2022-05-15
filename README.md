@@ -1,5 +1,12 @@
 # HackTheOceanFrontEnd
 Seccion frontend del proyecto desarrollado para hackaton en LaunchX
+# Links importantes
+
+- [HackTheOcean](https://github.com/HackTheOcean) Organizacion creada para administrar nuestro proyecto de hackaton.
+
+- [FrontEnd](https://github.com/HackTheOcean/HackTheOceanFrontEnd) Seccion frontend del proyecto
+
+- [BackEnd](https://github.com/HackTheOcean/HackTheOceanBackEnd) Seccion backend del proyecto
 
 ## Front Project setup
 ```
@@ -27,7 +34,7 @@ npm run lint
 
 ### Mapa de Impacto Contaminante
 Aqui se encuentra el mapa de impacto contaminante,donde se puede visuzalizar los pasos seguimos.g
-![image](../map_acuatico.png)
+![image](https://i.ibb.co/MgYzVfj/map-acuatico.png)
 
 En esta parte  se añadio el UX,buyer person, y el público objetivo.
 
