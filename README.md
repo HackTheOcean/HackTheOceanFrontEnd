@@ -21,8 +21,5 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-======= 
-
 ### Flujo Impacto Contaminante 
+![image](https://user-images.githubusercontent.com/48570016/168496404-05725370-1471-4753-9a5e-a23a44258706.png)
