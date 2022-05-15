@@ -79,8 +79,10 @@ export default {
 </script>
 
 
-<style scoped>
-    * { font-family: 'Poppins', sans-serif; font-weight: 300; }
+<style>
+    * { font-family: 'Poppins', sans-serif; font-weight: 300; color: white; }
+    body { background: rgb(2,0,36); background: -moz-linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); background: -webkit-linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); background: linear-gradient(360deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#020024",endColorstr="#00d4ff",GradientType=1); }
+    #polluting-impact { padding-top: 50px; padding-bottom: 50px; }
     #polluting-impact p.custom-width-pi { max-width: 700px; margin: 50px auto; display: table; }
     #image-polluting-impact { width: 400px; }
 </style>
