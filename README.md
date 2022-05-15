@@ -1,6 +1,7 @@
-# savetheocean
+# HackTheOceanFrontEnd
+Seccion frontend del proyecto desarrollado para hackaton en LaunchX
 
-## Project setup
+## Front Project setup
 ```
 npm install
 ```
@@ -22,6 +23,4 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-=======
-# HackTheOceanFrontEnd
-Seccion frontend del proyecto desarrollado para hackaton en LaunchX 
+======= 
