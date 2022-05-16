@@ -53,3 +53,14 @@ y conocemos las necesidades de la persona real.
 ## Público Objetivo
 En esta parte hacemos es un recorte demográfico de un grupo de personas como los futuros clientes del producto o del servicio.
 ![public_objetivo](https://user-images.githubusercontent.com/33709574/168485838-bb480894-14c5-4903-ace4-bf468baa801a.jpg)
+
+## UI
+Para esta etapa del hackaton logramos incorporar el UI del impacto contaminante con la API que desarrollamos
+
+![image](https://user-images.githubusercontent.com/48570016/168500992-2debec8e-dfdd-42a7-954c-60106175092d.png)
+
+Para una segunda etapa, esperamos incorporar el siguiente diseño con acciones que cada uno puede realizar, así como también una base de datos de empresas enfocadas a combatir la contaminación en los océanos para que si los usuarios tienen interés puedan conocer otras iniciativas hacer donaciones.
+
+![HackTheOcean](https://user-images.githubusercontent.com/48570016/168501093-747c88e3-c48a-435b-b2a2-b9e9278a3b78.jpg)
+
+
