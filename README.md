@@ -59,7 +59,7 @@ Para esta etapa del hackaton logramos incorporar el UI del impacto contaminante 
 
 ![image](https://user-images.githubusercontent.com/48570016/168500992-2debec8e-dfdd-42a7-954c-60106175092d.png)
 
-Para una segunda etapa, esperamos incorporar el diseño completo con acciones que cada uno puede realizar, así como también una base de datos de empresas enfocadas a combatir la contaminación en los océanos para que si los usuarios tienen interés puedan conocer otras iniciativas hacer donaciones.
+Para una segunda etapa, esperamos incorporar el siguiente diseño con acciones que cada uno puede realizar, así como también una base de datos de empresas enfocadas a combatir la contaminación en los océanos para que si los usuarios tienen interés puedan conocer otras iniciativas hacer donaciones.
 
 ![HackTheOcean](https://user-images.githubusercontent.com/48570016/168501093-747c88e3-c48a-435b-b2a2-b9e9278a3b78.jpg)
 
